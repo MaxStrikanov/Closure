@@ -27,7 +27,7 @@ const game = () => {
 
     if ( isNumber(num) ) {
 
-      let url = ( num < randomNum ) ? alert ('Загаданное число больше'):
+      let hiddenNumber = ( num < randomNum ) ? alert ('Загаданное число больше'):
                 ( num  > randomNum ) ? alert ('Загаданное число меньше'):
                  alert ('Вы угадали!') 
                  return playAgain();
