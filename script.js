@@ -32,7 +32,7 @@ const game = () => {
         alert ('Загаданное число больше')
         return playAgain()
         
-      } else if ( num  > randomNum   ) {
+      } else if ( num  > randomNum ) {
 
         alert ('Загаданное число меньше')
         return playAgain()
@@ -42,10 +42,6 @@ const game = () => {
         alert ('Вы угадали!')
         return playAgain();  
       }
-  
-    } else {
-      if ( num === null)
-       confirm ('Вы хотите завершить игру?');
     }
     
     repeatGame();
