@@ -27,13 +27,26 @@ const game = () => {
 
     if ( isNumber(num) ) {
 
-      let hiddenNumber = 
-        ( num < randomNum ) ? alert ('Загаданное число больше'):
-        ( num  > randomNum ) ? alert ('Загаданное число меньше'):
-        alert ('Вы угадали!') 
-        return playAgain();
+       if ( num < randomNum ) {
+
+        alert ('Загаданное число больше');
+
+        return playAgain(); 
+
+      } else if ( num  > randomNum ) {
+
+        alert ('Загаданное число меньше');
+        
+        return playAgain(); 
+
+      } else  {
+
+        alert ('Вы угадали!');
+
+        return;
         
     }
+  }
     
     repeatGame();
 
