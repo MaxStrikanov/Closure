@@ -1,11 +1,5 @@
 'use strict'
 
-const getRandomNumber = (min, max) => {
-  let rand = min + Math.random() * (max + 1 - min);
-	return Math.floor(rand);
-}
-console.log(getRandomNumber(1, 100));
-
 const isNumber = (n) => {
   return !isNaN(parseFloat(n)) && isFinite(n)
 }
@@ -19,7 +13,14 @@ const playAgain = () => {
 }
 
 const game = () => {
+
+  const getRandomNumber = (min, max) => {
+    let rand = min + Math.random() * (max + 1 - min);
+    return Math.floor(rand);
+  }
+
   const randomNum = getRandomNumber(1, 100)
+  console.log(randomNum);
 
   return ( function repeatGame() {
 
@@ -27,26 +28,18 @@ const game = () => {
 
     if ( isNumber(num) ) {
 
-       if ( num < randomNum ) {
-
+      if ( num < randomNum ) {
         alert ('Загаданное число больше');
-
-        return playAgain(); 
-
+        
       } else if ( num  > randomNum ) {
-
         alert ('Загаданное число меньше');
         
-        return playAgain(); 
-
-      } else  {
-
+      } else {
         alert ('Вы угадали!');
+        return playAgain();
+      }   
 
-        return;
-        
     }
-  }
     
     repeatGame();
 
